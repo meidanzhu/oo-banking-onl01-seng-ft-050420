@@ -11,5 +11,6 @@ class BankAccount
   def deposit
     @balance += money
     balance
+  end
 
 end
