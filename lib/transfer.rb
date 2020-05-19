@@ -17,13 +17,19 @@ class Transfer
   end
 
   def execute_transaction #sender needs to have enough money to transder to the receiver
-    puts amount
-    puts sender.balance
-    # if @amount > @sender.balance
-    #   @status = "rejected"
-    #   return "Transaction rejected. Please check your account balance."
-    #
-    # end
+    if amount > sender.balance
+      status = "rejected"
+      return "Transaction rejected. Please check your account balance."
+    else
+      sender.balance -= amount
+      receiver.balance += amount
+      status = "complete"
+      return status
+      
+      
+    
+  
+    end
   end
 
   def reverse_transfer
