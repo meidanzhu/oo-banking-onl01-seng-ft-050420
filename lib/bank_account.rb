@@ -15,4 +15,13 @@ class BankAccount
   def display_balance
     return "Your balance is $#{@balance}."
   end
+
+  def valid? #check the status. If it is "open" && balance > 0. Need if/else statement
+    if @status == "open" && @balance > 0 
+      return true
+    else
+      return false
+    end
+  end
+  
 end
