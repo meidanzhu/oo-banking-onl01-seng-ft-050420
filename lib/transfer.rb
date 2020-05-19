@@ -6,6 +6,14 @@ class Transfer
     @receiver = receiver
     @status = "pending"
     @amount = amount
-
   end
+
+  def valid? #check if both sender && receiver have valid account
+    if @sender.valid? && @receiver.valid?
+      return true
+    else
+      return false
+    end
+  end
+      
 end
