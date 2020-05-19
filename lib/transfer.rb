@@ -25,10 +25,10 @@ class Transfer
       receiver.balance += amount
       status = "complete"
       return status
-      
-      
-    
-  
+
+
+
+
     end
   end
 
