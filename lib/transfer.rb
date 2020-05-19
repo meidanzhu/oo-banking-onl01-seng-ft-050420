@@ -17,8 +17,8 @@ class Transfer
   end
 
   def execute_transaction #sender needs to have enough money to transder to the receiver
-    print amount
-    print sender.balance
+    puts amount
+    puts sender.balance
     # if @amount > @sender.balance
     #   @status = "rejected"
     #   return "Transaction rejected. Please check your account balance."
