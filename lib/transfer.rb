@@ -1,3 +1,6 @@
 class Transfer
-  # your code here
+  attr_accessor :transferer
+
+  def initialize(transferer)
+    @transferer = transferer
 end
