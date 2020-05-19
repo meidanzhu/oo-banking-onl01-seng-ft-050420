@@ -17,7 +17,7 @@ class Transfer
   end
 
   def execute_transaction #sender needs to have enough money to transder to the receiver
-    if
+    if @amount < @sender.balance
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
